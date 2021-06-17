@@ -1,6 +1,6 @@
 create new repository
 
-create file index.js
+create file arti-panel.js
 
 create new branch branch_2-
 

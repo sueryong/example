@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="927a4e4b-2127-4da7-9e19-421814ab0e57" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arti-panel.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/arti-panel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/product.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,9 @@
       <workItem from="1622189589012" duration="9178000" />
       <workItem from="1622510743873" duration="12757000" />
       <workItem from="1622768953377" duration="704000" />
-      <workItem from="1623291696118" duration="25631000" />
+      <workItem from="1623291696118" duration="28022000" />
+      <workItem from="1623634366253" duration="7274000" />
+      <workItem from="1623891735368" duration="54000" />
     </task>
     <servers />
   </component>
