@@ -16,9 +16,6 @@ class Panel {
     }
 
     setting = () => {
-        if(this.beforeLoad !== undefined){
-            this.beforeLoad();
-        }
         this.makePanel();
         this.setEvent();
         this.setTouchEvent();
@@ -38,8 +35,12 @@ class Panel {
     };
 
     makePanel = () => {
+        if(this.beforeLoad !== undefined){
+            this.beforeLoad();
+        }
+
         $('body').append(`
-                       <div data-status="0" id=${this.panelName} style="position: absolute; bottom: 0; z-index: 10000">
+                       <div data-status="0" id=${this.panelName} style="position: fixed; bottom: 0; z-index: 10000">
                           <div class="${this.panelName}-mask" style="position: fixed; top: 0; display: none; width: 100vw; height: 100vh; background-color: black; opacity: 0.6;"></div>
                           <div class="${this.panelName}-panel" style="position: fixed; border-top-left-radius: 10px; border-top-right-radius: 10px ; width: 100vw; background-color: white; transform: translate(0%, 0%); transition: all ease-in-out 0.3s 0s;">
                               <div class="${this.panelName}-drag-bar" style="position: relative; width: 100vw; height: 34px;">
@@ -69,14 +70,14 @@ class Panel {
         if (e.target !== e.currentTarget) return;
         document.querySelector('body').style.overflow = 'hidden';
         this.topElement.childNodes[3].style.transition = '';
-        this.lastY = e.touches[0].screenY;
+        this.lastY = e.touches[0].pageY;
     };
 
     handleMove = (e) => {
         e.preventDefault();
         if (e.target !== e.currentTarget) return;
         let panelTranslateY = Number(this.panelElement.css('transform').split(',')[5].slice(0, -1));
-        let deltaY = Number((this.lastY - e.touches[0].screenY).toFixed(3));
+        let deltaY = Number((this.lastY - e.touches[0].pageY).toFixed(3));
 
         if(this.onPanel === false){
             if(panelTranslateY >= 0 || panelTranslateY <= this.panelElement.height()){
@@ -98,7 +99,7 @@ class Panel {
         }
 
         e.target.parentNode.style.transform = `translate(0%, ${panelTranslateY - deltaY}px)`;
-        this.lastY = e.touches[0].screenY;
+        this.lastY = e.touches[0].pageY;
     };
 
     handleEnd = (e) => {
